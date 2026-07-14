@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mary, Star of the Sea — All Classes</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #eef2fa 0%, #f8f9fa 100%);
+      color: #253a77;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .container { max-width: 1000px; width: 100%; text-align: center; }
+    .logo-wrap { margin-bottom: 24px; }
+    .logos-row {
+      display: flex; gap: 28px; align-items: center; justify-content: center; flex-wrap: wrap;
+    }
+    .logo-circle {
+      width: 130px; height: 130px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 6px 20px rgba(37,58,119,0.18);
+      overflow: hidden;
+      display: inline-flex; align-items: center; justify-content: flex-start;
+      flex-shrink: 0;
+    }
+    .logo-circle img { display: block; }
+    .logo-circle.msos img { height: 100%; width: auto; }
+    .logo-circle.nui img { width: 100%; height: 100%; object-fit: cover; }
+    .logo-circle.msos { background: #1a2a4a; }
+    @media (max-width: 600px) {
+      .logo-circle { width: 100px; height: 100px; }
+    }
+    h1 {
+      color: #253a77;
+      font-size: 2.4rem;
+      margin: 14px 0 6px;
+      font-weight: 700;
+    }
+    .school-name {
+      color: #7a5f00;
+      font-size: 0.95rem;
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 12px;
+    }
+    .card {
+      background: #fff;
+      border: 2px solid #253a77;
+      border-radius: 16px;
+      padding: 32px 22px;
+      text-decoration: none;
+      color: #253a77;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(37, 58, 119, 0.08);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 240px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(37, 58, 119, 0.28);
+      background: #253a77;
+      color: #fff;
+    }
+    .card:hover .card-theme { color: #FFD100; }
+    .card:hover .card-icon { transform: scale(1.05); background: #FFD100; color: #253a77; }
+    .card-icon {
+      font-size: 2.2rem;
+      line-height: 1;
+      margin-bottom: 16px;
+      width: 88px; height: 88px;
+      border-radius: 50%;
+      background: #253a77;
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .card-label {
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+    .card-theme {
+      font-size: 0.92rem;
+      opacity: 0.85;
+      font-style: italic;
+      transition: color 0.2s;
+      line-height: 1.4;
+    }
+    footer {
+      margin-top: 48px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.9rem; }
+      .card-icon { width: 76px; height: 76px; font-size: 1.9rem; }
+      .card { min-height: 210px; padding: 26px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-wrap">
+      <div class="logos-row">
+        <span class="logo-circle msos" title="Mary, Star of the Sea"><img src="msos-logo.svg" alt="Mary, Star of the Sea Logo"></span>
+        <span class="logo-circle nui" title="Nurture · Unite · Inspire"><img src="nui-logo.png" alt="Nurture-Unite-Inspire Logo"></span>
+      </div>
+    </div>
+    <h1>All Classes</h1>
+    <p class="school-name">Mary, Star of the Sea SY 2026-2027</p>
+
+    <div class="grid">
+      <a class="card" href="https://classes-list.github.io/elementary-school/">
+        <div class="card-icon">🌱</div>
+        <div class="card-label">Elementary School Classes</div>
+        <div class="card-theme">Grades K–3</div>
+      </a>
+
+      <a class="card" href="https://classes-list.github.io/intermediate-school/">
+        <div class="card-icon">🌿</div>
+        <div class="card-label">Intermediate School Classes</div>
+        <div class="card-theme">Grades 4–5</div>
+      </a>
+
+      <a class="card" href="https://classes-list.github.io/middle-school/">
+        <div class="card-icon">🌳</div>
+        <div class="card-label">Middle School Classes</div>
+        <div class="card-theme">Grades 6–8</div>
+      </a>
+    </div>
+
+    <footer>
+      &copy; Mary, Star of the Sea School &middot; SY 2026-2027
+    </footer>
+  </div>
+</body>
+</html>
